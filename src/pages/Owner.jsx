@@ -9,10 +9,7 @@ export default function Owner() {
                 <img className="w-full object-cover" src={myImage} alt="31_Thanawat_Art" />
             </div>
             <h2 className="mb-4 font-semibold">Short Biography:</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, pariatur! Quod iste dolorum, dicta nam et asperiores quaerat hic. Officiis, dicta porro saepe in error recusandae omnis numquam perspiciatis, animi impedit mollitia itaque
-                nobis consequuntur fugit fugiat expedita! Praesentium maxime ratione magni inventore deleniti ab sunt ea distinctio iure incidunt!
-            </p>
+            <p>Hi, I'm Art. At first, it was quite hard. However, after a few bugs, I think I'm understand React better now.</p>
         </section>
     );
 }
