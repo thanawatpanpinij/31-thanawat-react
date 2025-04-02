@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Buttons from "../components/Buttons";
 import Table from "../components/Table";
-import { UserDataContext } from "../context/userDataContext";
+import { UserDataContext } from "../context/UserDataContext";
 
 export default function Users() {
     const { userData } = useContext(UserDataContext);

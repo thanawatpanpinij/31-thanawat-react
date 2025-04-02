@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { UserDataContext } from "./userDataContext";
+import { UserDataContext } from "./UserDataContext";
 import axios from "axios";
 
 export function UserDataProvider({ children }) {
