@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useContext } from "react";
-import { UserDataContext } from "../context/userDataContext";
+import { UserDataContext } from "../context/UserDataContext";
 
 export default function Table({ users }) {
     console.log(users);
