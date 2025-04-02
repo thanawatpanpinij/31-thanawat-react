@@ -8,7 +8,7 @@ export default function Admin() {
     const [nameInput, setNameInput] = useState("");
     const [lastnameInput, setLastnameInput] = useState("");
     const [positionInput, setPositionInput] = useState("");
-    const { userData, setUserData } = useContext(UserDataContext);
+    const { userData, getUsers } = useContext(UserDataContext);
 
     async function createUser() {
         const newUser = {
@@ -17,7 +17,7 @@ export default function Admin() {
             position: positionInput,
         };
         await axios.post(`https://jsd5-mock-backend.onrender.com/members`, newUser);
-        setUserData([...userData, newUser]);
+        getUsers();
     }
 
     return (
