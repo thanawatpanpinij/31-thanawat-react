@@ -6,7 +6,7 @@ export default function Layout() {
     return (
         <>
             <Navbar />
-            <main className="min-h-screen px-8 py-16 bg-[#E8E8E8]">
+            <main className="my-16">
                 <Outlet />
             </main>
         </>

@@ -3,7 +3,6 @@ import React, { useContext } from "react";
 import { UserDataContext } from "../context/UserDataContext";
 
 export default function Table({ users }) {
-    console.log(users);
     const { userData, setUserData } = useContext(UserDataContext);
     const isAdminUrl = window.location.href.includes("admin");
 

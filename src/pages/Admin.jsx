@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Buttons from "../components/Buttons";
 import { UserDataContext } from "../context/UserDataContext";
 import Table from "../components/Table";
@@ -11,6 +11,11 @@ export default function Admin() {
     const { userData, getUsers } = useContext(UserDataContext);
 
     async function createUser() {
+        if (!nameInput || !lastnameInput || !positionInput) {
+            alert("Please enter details");
+            return;
+        }
+
         const newUser = {
             name: nameInput,
             lastname: lastnameInput,
@@ -19,6 +24,10 @@ export default function Admin() {
         await axios.post(`https://jsd5-mock-backend.onrender.com/members`, newUser);
         getUsers();
     }
+
+    useEffect(() => {
+        getUsers();
+    }, []);
 
     return (
         <>
@@ -39,7 +48,7 @@ export default function Admin() {
                     </button>
                 </div>
             </section>
-            <Table users={userData} />
+            <Table users={userData} input={{ nameInput, lastnameInput, positionInput }} />
         </>
     );
 }
