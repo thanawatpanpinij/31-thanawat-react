@@ -23,6 +23,9 @@ export default function Admin() {
         };
         await axios.post(`https://jsd5-mock-backend.onrender.com/members`, newUser);
         getUsers();
+        setNameInput("");
+        setLastnameInput("");
+        setPositionInput("");
     }
 
     useEffect(() => {
