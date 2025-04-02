@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Buttons from "../components/Buttons";
 import Table from "../components/Table";
 import { UserDataContext } from "../context/UserDataContext";
 
 export default function Users() {
-    const { userData } = useContext(UserDataContext);
+    const { userData, getUsers } = useContext(UserDataContext);
+
+    useEffect(() => {
+        getUsers();
+    }, []);
 
     return (
         <>
